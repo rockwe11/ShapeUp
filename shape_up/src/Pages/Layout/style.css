@@ -1,0 +1,131 @@
+/* Сброс стандартных стилей */
+body, h1, h2, h3, p, ul, ol, li, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Устанавливаем шрифты и общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Стиль шапки */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333; /* Цвет фона для всех страниц */
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.header-transparent {
+    background: transparent; /* Прозрачная шапка на главной */
+    position: absolute; /* Расположена поверх содержимого */
+    top: 0;
+    left: 0;
+    width: 100%; /* Растянута на всю ширину */
+    z-index: 10; /* Поверх содержимого */
+}
+
+.header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-transparent .logo a {
+    color: white;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-buttons .btn,
+.user-info button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-buttons .btn:hover,
+.user-info button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.header-transparent .auth-buttons .btn,
+.header-transparent .user-info button {
+    color: white; /* Белый текст и кнопки */
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.header-transparent .auth-buttons .btn:hover,
+.header-transparent .user-info button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.header-transparent .user-info span {
+    background-color: #555;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+/* Кнопка выхода */
+.logout-button {
+    background-color: #ff4d4d;
+    border: none;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* Основной контент */
+.main {
+    flex: 1;
+    background-color: #f9f9f9;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+/* Анимация и переходы */
+.header-transparent {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}

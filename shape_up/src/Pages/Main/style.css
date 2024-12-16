@@ -1,0 +1,233 @@
+/* Общий стиль страницы */
+.mainpage {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Секция с акциями */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    width: 100vw; /* 100% ширины экрана */
+    height: 70vh; /* Картинка будет занимать 70% высоты экрана */
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* Отключаем прокрутку */
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.carousel-image {
+    width: 100%;  /* Картинка растягивается по ширине */
+    height: auto;  /* Высота подстраивается по пропорциям */
+    object-fit: cover;  /* Сохраняем пропорции изображения */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 20%;  /* Располагаем текст снизу */
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 80%;
+    z-index: 10;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 36px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Секция описания зала */
+/* .gym-description {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gym-description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gym-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+} */
+.gym-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 12;
+}
+
+.gym-description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: -3rem;
+    z-index: 13;
+}
+
+.card {
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    padding: 1.5rem;
+    padding: 0rem;
+    width: 300px;
+    /* text-align: left; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 14;
+    margin-top: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    /* margin-bottom: 1rem; */
+    padding: 0.5rem; /* Добавляем отступы внутри заголовка */
+    background-color: #007bff; /* Цвет фона для h3 */
+    color: #fff; /* Цвет текста в h3 */
+    border-radius: 8px;
+    text-align: center;
+    /* border-top-left-radius: 8px; Скругление верхнего левого угла */
+    /* border-top-right-radius: 8px; Скругление верхнего правого угла */
+    margin: 0; /* Убираем отступы для h3 */
+}
+
+.card p {
+    color: #555;
+    padding: 1rem;
+    text-align: left;
+}
+
+.card h3.c1 {
+    background-color: #249cc4;
+}
+
+.card h3.c2 {
+    background-color: #424141;
+}
+
+.card h3.c3 {
+    background-color: #b467c5;
+}
+
+
+/* Блок с абонементами */
+.memberships {
+    text-align: center;
+}
+
+.memberships h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.membership-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.membership-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.membership-card p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.membership-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.membership-card button:hover {
+    background-color: #0056b3;
+}
